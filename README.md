@@ -1,4 +1,4 @@
-# Versatile-Forecaster - A Time Series Analysis and Forecasting Platform
+# Versatile-Forecaster: A Time Series Analysis and Forecasting Platform powered by AI
 
 A comprehensive web application for time series analysis and forecasting, combining modern frontend technologies with powerful Python-based analytics.
 
