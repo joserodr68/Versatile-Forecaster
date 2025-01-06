@@ -33,7 +33,7 @@ A comprehensive web application for time series analysis and forecasting, combin
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/time-series-platform.git
+git clone https://github.com/joserodr68/Versatile-Forecaster/
 
 # Install backend dependencies
 pip install -r requirements.txt
