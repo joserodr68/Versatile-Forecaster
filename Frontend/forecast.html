@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile Forecaster - Forecast</title>
+    <link rel="stylesheet" href="forecast.css">
+    <!-- Include Plotly.js for interactive plotting -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Versatile Forecaster</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="forecast.html" class="active">Forecast</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="forecast-header">
+            <h1>Time Series Forecasting</h1>
+            <p id="currentFile">Current file: Loading...</p>
+        </div>
+
+        <div class="forecast-controls">
+            <div class="control-group">
+                <label for="modelSelect">Select Model:</label>
+                <select id="modelSelect">
+                    <option value="prophet">Prophet</option>
+                    <option value="nhits">N-HITS</option>
+                    <option value="informer">Informer</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="periodsInput">Forecast Periods:</label>
+                <input type="number" id="periodsInput" min="1" max="365" value="30">
+            </div>
+            <button id="generateForecast" class="primary-button">Generate Forecast</button>
+        </div>
+
+        <div class="forecast-grid">
+            <!-- Forecast Plot -->
+            <div class="forecast-card">
+                <h2>Forecast Plot</h2>
+                <div id="forecastPlot" class="plot-container"></div>
+            </div>
+
+            <!-- Model Performance -->
+            <div class="forecast-card">
+                <h2>Model Performance</h2>
+                <div class="metrics-container">
+                    <table id="metricsTable">
+                        <tbody>
+                            <tr><td>Mean Absolute Error (MAE):</td><td id="mae">-</td></tr>
+                            <tr><td>Root Mean Square Error (RMSE):</td><td id="rmse">-</td></tr>
+                            <tr><td>R-squared (R²):</td><td id="r2">-</td></tr>
+                            <tr><td>Mean Absolute Percentage Error (MAPE):</td><td id="mape">-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Forecasting Company</p>
+    </footer>
+
+    <script src="forecast.js"></script>
+</body>
+</html>

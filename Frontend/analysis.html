@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile Forecaster - Analysis</title>
+    <link rel="stylesheet" href="analysis.css">
+    <!-- Include Plotly.js for interactive plotting -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Versatile Forecaster</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="analysis.html" class="active">Analysis</a></li>
+            <li><a href="forecast.html">Forecast</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="analysis-header">
+            <h1>Time Series Analysis</h1>
+            <p id="currentFile">Current file: Loading...</p>
+        </div>
+
+        <div class="analysis-grid">
+            <!-- Original Time Series Plot -->
+            <div class="analysis-card">
+                <h2>Time Series Plot</h2>
+                <div id="timeSeriesPlot" class="plot-container"></div>
+            </div>
+
+            <!-- Statistical Summary -->
+            <div class="analysis-card">
+                <h2>Statistical Summary</h2>
+                <div id="statsSummary" class="stats-container">
+                    <table id="statsTable">
+                        <tbody>
+                            <tr><td>Mean:</td><td id="mean">-</td></tr>
+                            <tr><td>Standard Deviation:</td><td id="std">-</td></tr>
+                            <tr><td>Minimum:</td><td id="min">-</td></tr>
+                            <tr><td>Maximum:</td><td id="max">-</td></tr>
+                            <tr><td>Sample Size:</td><td id="length">-</td></tr>
+                            <tr><td colspan="2"><strong>Stationarity Test (ADF)</strong></td></tr>
+                            <tr><td>Test Statistic:</td><td id="adf-stat">-</td></tr>
+                            <tr><td>P-Value:</td><td id="adf-pvalue">-</td></tr>
+                            <tr><td>Is Stationary:</td><td id="is-stationary">-</td></tr>
+                            <tr><td colspan="2" id="critical-values"><strong>Critical Values:</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ACF Plot -->
+            <div class="analysis-card">
+                <h2>Autocorrelation Function (ACF)</h2>
+                <div id="acfPlot" class="plot-container"></div>
+            </div>
+
+            <!-- PACF Plot -->
+            <div class="analysis-card">
+                <h2>Partial Autocorrelation Function (PACF)</h2>
+                <div id="pacfPlot" class="plot-container"></div>
+            </div>
+
+            <!-- Auto ARIMA Results -->
+            <div class="analysis-card">
+                <h2>Auto ARIMA Model</h2>
+                <div id="arimaResults" class="model-container">
+                    <h3>Model Parameters</h3>
+                    <div id="arimaParams"></div>
+                    <h3>Model Diagnostics</h3>
+                    <div id="arimaResiduals" class="plot-container"></div>
+                </div>
+            </div>
+
+            <!-- GARCH Effects -->
+            <div class="analysis-card">
+                <h2>GARCH Effects</h2>
+                <div id="garchResults" class="model-container">
+                    <h3>Volatility Analysis</h3>
+                    <div id="garchPlot" class="plot-container"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Forecasting Company</p>
+    </footer>
+
+    <script src="analysis.js"></script>
+</body>
+</html>

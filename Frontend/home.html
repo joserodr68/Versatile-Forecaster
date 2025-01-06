@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile Forecaster - Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Versatile Forecaster</div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="forecast.html">Forecast</a></li>
+            <li><a href="report.html">Report</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="upload-section">
+            <h1>Welcome to The Versatile Forecaster</h1>
+            <p>Upload your time series data to begin analysis</p>
+            
+            <div class="upload-container">
+                <div class="file-upload">
+                    <input type="file" id="csvFile" accept=".csv" hidden>
+                    <button id="uploadBtn">Choose CSV File</button>
+                    <p id="fileName">No file chosen</p>
+                </div>
+                <div class="requirements">
+                    <h3>File Requirements:</h3>
+                    <ul>
+                        <li>CSV format only</li>
+                        <li>Must contain timestamp column</li>
+                        <li>Must contain values column</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button id="submitBtn" class="submit-btn" disabled>Upload and Analyze</button>
+            <div id="uploadStatus"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Forecasting Company</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

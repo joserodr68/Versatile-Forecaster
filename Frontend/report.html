@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versatile Forecaster - Report</title>
+    <link rel="stylesheet" href="report.css">
+    <!-- Include marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Versatile Forecaster</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="forecast.html">Forecast</a></li>
+            <li><a href="report.html" class="active">Report</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="report-header">
+            <h1>Forecast Report</h1>
+            <p id="currentFile">Current file: Loading...</p>
+        </div>
+
+        <div class="report-content">
+            <!-- Forecast Plot Display -->
+            <div class="forecast-plot-container">
+                <h2>Forecast Visualization</h2>
+                <img id="forecastPlot" src="" alt="Forecast Plot" class="forecast-plot">
+            </div>
+
+            <!-- Report Container -->
+            <div class="report-container">
+                <div class="report-controls">
+                    <button id="generateReport" class="primary-button">Generate Report</button>
+                    <button id="saveReport" class="secondary-button" disabled>Save Report</button>
+                </div>
+                <div id="reportContent" class="markdown-content">
+                    <p class="placeholder-text">Click "Generate Report" to create a detailed analysis...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Forecasting Company</p>
+    </footer>
+
+    <script src="report.js"></script>
+</body>
+</html>
